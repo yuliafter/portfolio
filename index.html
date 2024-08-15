@@ -73,24 +73,24 @@
         <section>
             <h2>About Me</h2>
             <p>Hi, I'm Yulia. I'm a book editor. I love working on interesting projects and learning new skills. Here, you'll find some of my work and information about me. But Yulia, why is your portfolio website so.. plain.. and boring? Surely you have time to improve your skills in GitHub? That's a good question, and one I have an answer that I will not say without my lawyer present. Thank you.</p>
-            <button onclick="showMessage('about')">More About Me</button>
+            <button onclick="redirect('about')">More About Me</button>
         </section>
         <section>
             <h2>Projects</h2>
             <div class="project">
                 <h3>Yudhistira Book Projects</h3>
                 <p>I've edited an average of one book per month for the publisher Yudhsitira Ghalia Indonesia. As a full-time editor, I am responsible for collaborating with writers and a native proofreader.</p>
-                <button onclick="showMessage('project1')">View Project</button>
+                <button onclick="redirect('project1')">View Project</button>
             </div>
             <div class="project">
                 <h3>Quipper English Animations</h3>
                 <p> I've crafted and adapted engaging English stories, seamlessly transitioning them from written to spoken formats.</p>
-                <button onclick="showMessage('project2')">View Project</button>
+                <button onclick="redirect('project2')">View Project</button>
             </div>
             <div class="project">
                 <h3>YouTube Indonesian Subtitles</h3>
                 <p>I did some subtitling for some of the videos uploaded by h3h3productions and videogamedunkey</p>
-                <button onclick="showMessage('project3')">View Project</button>
+                <button onclick="redirect('project3')">View Project</button>
             </div>
         </section>
     </div>
@@ -98,22 +98,19 @@
         <p>© 2024 Yulia Febrianti. All rights reserved.</p>
     </footer>
     <script>
-        function showMessage(section) {
+        function redirect(section) {
             switch(section) {
                 case 'about':
-                    alert('For more information, visit my LinkedIn at https://www.linkedin.com/in/yuliafebrianti/');
+                    window.location.href = 'https://www.linkedin.com/in/yuliafebrianti/';
                     break;
                 case 'project1':
-                    alert('Project One: A web application built with React and Node.js.');
+                    window.location.href = 'https://drive.google.com/file/d/1xNvBI6ZqDfGIn2Zf0G2w-rfg2l3b0OhI/view';
                     break;
-                case 'Script to Screen':
-                    alert('https://drive.google.com/file/d/1xNvBI6ZqDfGIn2Zf0G2w-rfg2l3b0OhI/view');
-                    break;
-                case 'Subtitles':
-                    alert('Checkout the videos I have subbed in this link: https://www.youtube.com/playlist?list=PLLpFYIjnt5xnyUeYF0xN5g158HYSk1zfu');
+                case 'project2':
+                    window.location.href = 'https://www.youtube.com/playlist?list=PLLpFYIjnt5xnyUeYF0xN5g158HYSk1zfu';
                     break;
                 default:
-                    alert('Welcome to my portfolio!');
+                    window.location.href = '#';
             }
         }
     </script>
